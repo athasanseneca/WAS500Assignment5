@@ -1,5 +1,5 @@
 {
-  "name": "new-was500",
+  "name": "lab-5",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,13 +10,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.1",
     "ejs": "^3.1.8",
+    "ejs-layouts": "^0.0.1",
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1",
-    "fs": "^0.0.1-security",
     "http-status-codes": "^2.2.0",
-    "mongoose": "^6.7.2",
+    "mongoose": "^6.7.5",
     "nodemon": "^2.0.20"
   }
 }

@@ -9,7 +9,7 @@ exports.logErrors = (error, req, res, next) => {
 exports.respondNoResourceFound = (req, res) => {
   let errorCode = httpStatus.StatusCodes.NOT_FOUND;
   res.status(errorCode);
-  var errormsg = `The page does not exist! Error Code: ${errorCode}`;
+  var errormsg = `This page is not available, Error Code: ${errorCode}`;
   console.log(errormsg);
   res.render('404', { errormsg: errormsg })
 };
@@ -18,7 +18,7 @@ exports.respondInternalError = (error, req, res, next) => {
   let errorCode = httpStatus.StatusCodes.INTERNAL_SERVER_ERROR;
   console.log(`ERROR occurred: ${error.stack}`);
   res.status(errorCode);
-  var errormsg = `Sorry, our application is experiencing a problem! Error Code: ${errorCode}`;
+  var errormsg = `There is a problem with the application Error Code: ${errorCode}`;
   console.log(errormsg);
   res.render('404', { errormsg: errormsg })
 };
