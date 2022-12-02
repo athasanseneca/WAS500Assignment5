@@ -1,7 +1,7 @@
 const httpStatus = require("http-status-codes");
 
 exports.logErrors = (error, req, res, next) => {
-  console.log("logging new error!");
+  console.log("There is an error with logging");
   console.error("here it is", error.stack);
   next(error);
 };
