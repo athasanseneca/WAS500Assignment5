@@ -28,6 +28,7 @@ const db = mongoose.connection;
 
 db.once("open", () => {
   console.log("Successfully connected to MongoDB using Mongoose!");
+
 });
 
 app.use((req, res, next) => {
@@ -40,13 +41,17 @@ app.get("", (req, res) => {
   res.render('index');
 });
 
+app.get("/index.html", (req, res) => {
+  res.render('index');
+});
+
 app.get("/books.html", BooksController.getAllBooks, (req, res) => {
-  res.render('books', { books: req.data });
+  res.render('books', { params: req.data });
 });
 
 
-app.get("/books/:books", BooksController.getBook, (req, res) => {
-  res.render('bookpage', { info: req.data });
+app.get("/books/:id", BooksController.getBook, (req, res) => {
+  res.render('bookpage', { book: req.data });
 });
 
 app.use(errorController.logErrors);

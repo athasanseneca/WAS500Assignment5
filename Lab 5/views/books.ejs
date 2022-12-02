@@ -1,10 +1,10 @@
-<% books.forEach(info => 
+<% params.forEach(params => 
     { %>
-        <div class="body">
+        <div class="tables">
             <table>
                 <tr>
-                    <td style="width: 25%;"><a href="./books/<%- info.id %>"><img src="../public/images/<%- info.cover %>" style="max-width: 75%; max-height: 75%;"></a></td>
-                    <td style="width: 75%;"><a href="./books/<%- info.id %>"><h2><%- info.title %></h2></a></td>
+                    <td><a href="./books/<%- params._id %>"><img src="../public/images/<%- params.picture %>" id="p1" style="width:300px;height:300px; "></a></td>
+                    <td><a href="./books/<%- params._id %>"><%- params.name %></a></td>
                 </tr>
             </table>
         </div>

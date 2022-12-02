@@ -10,8 +10,8 @@ exports.getAllBooks = (req, res, next) => {
 };
 
 exports.getBook = (req, res, next) => {
-    let params_book_id = req.params.books;
-    Books.findOne({id: params_book_id}, (error, book) => {
+    let params_book_id = req.params.id;
+    Books.findOne({_id: params_book_id}, (error, book) => {
       if (error) next(error);
       req.data = book;
       next();
